@@ -109,6 +109,8 @@ const addPerson = (event) => {
             setTimeout(() => {
               setNotificationMessage(null)            
             }, 5000)
+        }).catch(error => {          
+          setErrorMessage(`error : ${error.response.data.error}`)
         })
         setNewName('')
         setNewNumber('') 
